@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.animation {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(202, 230, 255);
+    animation-name: sky-change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sky-change {
+    0% {
+        background: rgb(189, 232, 253);
+    }
+    20% {
+        background: rgb(127, 255, 84);
+    }
+    40% {
+        background: rgb(252, 105, 13);
+    }
+    60% {
+        background: rgb(83, 17, 251);
+    }
+    80% {
+        background: rgb(12, 6, 129)
+    }
+    100% {
+        background: rgb(189, 232, 253)
+    }
+}
+
+#back-wheel,
+#front-wheel,
+#car,
+#front-window,
+#side-window,
+#bag-1,
+#bag-2 {
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#front-disc,
+#back-disc {
+    animation-name: spin;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+    transform-box: content-box;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes jump {
+    from {
+        translate: 0 -15px;
+    }
+    to {
+        translate: 0 1px;
+    }
+}
+
+#Lamp {
+    animation-name: ligths;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes ligths {
+    0% {
+        fill: #E6E6E6;
+    }
+    25% {
+        fill: rgb(253, 253, 151);
+    }
+    50% {
+        fill: yellow;
+    }
+    75% {
+        fill: rgb(253, 253, 151);
+    }
+    100% {
+        fill: #E6E6E6;
+    }
+}
+
+#leaf {
+    animation-name: leaf; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-box: content-box;
+    transform-origin: center;
+    fill: forestgreen;
+}
+
+@keyframes leaf {
+    0% {
+        translate: 0 0;
+        scale: 1;
+    }
+    50% {
+        translate: -550px -300px;
+        rotate: 160deg;
+    }
+    100% {
+        translate: -1100px -600px;
+        rotate: 90deg;
+    }
+}
+
+#front-window,
+#side-window {
+    animation-name: sheen;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sheen {
+    0% {
+        fill: white;
+    }
+    25% {
+        fill: rgb(136, 249, 249);
+    }
+    50% {
+        fill: aqua;
+    }
+    75% {
+        fill: rgb(136, 249, 249);
+    }
+    100% {
+        fill: white;
+    }
+}
+
+#lock-1,
+#lock-2,
+#lock-3 {
+    animation-name: lock;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lock {
+    0% {
+        fill: #3F3D56;
+    }
+    25% {
+        fill: rgb(140, 154, 154);
+    }
+    50% {
+        fill: rgb(80, 85, 85);
+    }
+    75% {
+        fill: rgb(140, 154, 154);
+    }
+    100% {
+        fill: #3F3D56;
+    }
+}
